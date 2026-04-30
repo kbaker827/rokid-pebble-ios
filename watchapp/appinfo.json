@@ -1,0 +1,23 @@
+{
+  "uuid": "a7e23b4c-5d1f-4a3e-8c6b-9f2e1d0b4a5c",
+  "shortName": "RokidHub",
+  "longName": "Rokid Hub",
+  "companyName": "kbaker827",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt", "chalk", "diorite", "emery"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "sourceName":  0,
+    "line1":       1,
+    "line2":       2,
+    "line3":       3,
+    "statusCode":  4,
+    "buttonEvent": 5
+  },
+  "resources": {
+    "media": []
+  }
+}

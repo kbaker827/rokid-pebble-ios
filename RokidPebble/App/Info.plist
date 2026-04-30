@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>RokidPebble connects to your Pebble watch via Bluetooth to display live weather and print status on the watch face.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>RokidPebble listens for Tempest weather data on the local network and streams status to Rokid glasses via TCP.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_rokidpebble._tcp</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+		<string>fetch</string>
+	</array>
+</dict>
+</plist>
