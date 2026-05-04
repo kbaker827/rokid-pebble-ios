@@ -82,6 +82,27 @@ The UUID in `appinfo.json` matches `watchappUUID` in `SourceModels.swift` — bo
 
 Add more sources by creating a new `@MainActor class` with an `@Published var data: SourceData` and registering it in `HubViewModel.activeSources`.
 
+## SDK Setup
+
+The glasses now connect over **Bluetooth via the Rokid AI glasses SDK** — no Wi-Fi port or TCP server needed.
+
+The only thing left for each app is filling in the three credential constants (`kAppKey`, `kAppSecret`, `kAccessKey`) from [account.rokid.com/#/setting/prove](https://account.rokid.com/#/setting/prove), then running `pod install`.
+
+1. **Get credentials** at <https://account.rokid.com/#/setting/prove> and paste them into the glasses Swift file:
+   ```swift
+   private let kAppKey    = "YOUR_APP_KEY"
+   private let kAppSecret = "YOUR_APP_SECRET"
+   private let kAccessKey = "YOUR_ACCESS_KEY"
+   ```
+
+2. **Install CocoaPods dependencies** from the repo root:
+   ```bash
+   pod install
+   open *.xcworkspace   # always open the .xcworkspace, not .xcodeproj
+   ```
+
+3. *(Glasses now connect automatically over Bluetooth — no TCP port needed.)*
+
 ## Setup
 
 1. Open `RokidPebble.xcodeproj` in Xcode 15+.
@@ -91,7 +112,7 @@ Add more sources by creating a new `@MainActor class` with an `@Published var da
 5. In **Settings**: enable Tempest and/or Snapmaker, enter Snapmaker IP if needed.
 6. Pair your Pebble watch via the Pebble Core companion app first; then the hub connects automatically via BLE.
 7. Install the `watchapp` on your Pebble (see above).
-8. Connect Rokid glasses to the same Wi-Fi; point TCP client at `<phone-ip>:8090`.
+8. *(Glasses now connect automatically over Bluetooth — no TCP port needed.)*
 
 ## Requirements
 
