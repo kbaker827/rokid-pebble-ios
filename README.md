@@ -1,10 +1,16 @@
 # Rokid Pebble Hub
 
+
+> **🔵 Connectivity Update — May 2025**
+> The glasses connection has been migrated from **raw TCP sockets** to
+> **Bluetooth via the Rokid AI glasses SDK** (`pod 'RokidSDK' ~> 1.10.2`).
+> No Wi-Fi port forwarding is needed. See **SDK Setup** below.
+
 iOS app that bridges live data from multiple sources to both **Rokid AR glasses** (TCP) and a **Pebble watch** (BLE/PPOGATT) simultaneously.
 
 ```
 Tempest Hub  ──UDP :50222──▶ ┐
-Snapmaker U1 ──HTTP :8080──▶ ├─ iPhone (RokidPebble) ──TCP :8090──▶ Rokid Glasses
+Snapmaker U1 ──HTTP :8080──▶ ├─ iPhone (RokidPebble) ──Bluetooth/RokidSDK──▶ Rokid Glasses
                               └─────────────BLE (PPOGATT)──────────▶ Pebble Watch
 ```
 
