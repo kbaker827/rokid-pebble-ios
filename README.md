@@ -105,7 +105,7 @@ The only thing left for each app is filling in the three credential constants (`
 
 ## Setup
 
-1. Open `RokidPebble.xcodeproj` in Xcode 15+.
+1. Open `RokidPebble.xcworkspace` in Xcode 15+ (after running `pod install`) 15+.
 2. Set your team in Signing & Capabilities.
 3. Build and run on iPhone (iOS 17+).
 4. Grant Bluetooth and local network permissions when prompted.
